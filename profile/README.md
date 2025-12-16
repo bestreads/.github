@@ -18,3 +18,20 @@ Aktivitäten wie Lesefortschritte oder Statusupdates sollen mit anderen Nutzerin
 | 7      | 16.02 – 20.02 (kurz) Bericht|
 
 Hochschulphase: 12.01 - 6.02
+
+
+Buch JSON Format:
+{
+    ISBN: "978-0441013593", // Braucht das Frontend eig net aber yok
+    title: "Dune",
+    author: "Frank Herbert",
+    coverurl: "https://m.media-amazon.com/images/I/71oSHCZABCL._SY466_.jpg", // Muss noch verändert werden
+    ratingavg: 4.2,
+    description: "Arrakis ist eine tödliche Wüstenwelt und der einzige Fundort der Droge 'Spice', die das Reisen zwischen den Sternen ermöglicht. Als seine Familie verraten wird, beginnt für Paul Atreides ein Kampf, der das Schicksal des gesamten Universums verändern wird.",
+    releasedate: 1965,
+    genre: "Science Fiction",
+    userBook: {
+      state: "read",
+      rating: 4,
+    },
+  },
