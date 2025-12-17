@@ -20,7 +20,10 @@ Aktivitäten wie Lesefortschritte oder Statusupdates sollen mit anderen Nutzerin
 Hochschulphase: 12.01 - 6.02
 
 
-Buch JSON Format:
+
+
+# Endpunkt Vorschläge/Wünsche 😎🥰
+## Buch JSON Format:
 {
     ISBN: "978-0441013593", // Braucht das Frontend eig net aber yok
     title: "Dune",
@@ -35,3 +38,20 @@ Buch JSON Format:
       rating: 4,
     },
   },
+
+
+## Userdata/stats von beliebigem User mit userId bekommen:
+  const userStats = {
+    userId: 123,
+    username: "test123",
+    profilePictureURL: "...",
+    accountCreatedAtYear: 2025,
+    booksInLibrary: 12,
+    posts: 34,
+    follower: 5678,
+    following: 91011,
+  }
+
+## Folgestatus prüfen: userId1 folgt userId2? -> true/false
+
+## Folgen: userId1 folgt jetzt userId2
