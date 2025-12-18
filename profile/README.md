@@ -10,8 +10,8 @@ Aktivitäten wie Lesefortschritte oder Statusupdates sollen mit anderen Nutzerin
 | Sprint | Zeitraum             |
 | ------ | -------------------- |
 | 1      | 24.11 – 05.12        |
-| 2      | 08.12 – 19.12 <-- Derzeit hier       | 
-| 3      | 22.12 – 02.01  Projektpause      |
+| 2      | 08.12 – 19.12        | 
+| 3      | 22.12 – 02.01  Projektpause <-- Derzeit hier      |
 | 4      | 05.01 – 16.01        |
 | 5      | 19.01 – 30.01        |
 | 6      | 02.02 – 13.02        Präsentation|
