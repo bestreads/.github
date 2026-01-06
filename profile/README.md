@@ -11,8 +11,8 @@ Aktivitäten wie Lesefortschritte oder Statusupdates sollen mit anderen Nutzerin
 | ------ | -------------------- |
 | 1      | 24.11 – 05.12        |
 | 2      | 08.12 – 19.12        | 
-| 3      | 22.12 – 02.01  Projektpause <-- Derzeit hier      |
-| 4      | 05.01 – 16.01        |
+| 3      | 22.12 – 02.01  Projektpause      |
+| 4      | 05.01 – 16.01 <-- Derzeit hier        |
 | 5      | 19.01 – 30.01        |
 | 6      | 02.02 – 13.02        Präsentation|
 | 7      | 16.02 – 20.02 (kurz) Bericht|
