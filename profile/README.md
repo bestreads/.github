@@ -98,7 +98,7 @@ interface UserProfile {
 |---------|------|----------|---------|--------------|-------------|
 | **Eigene Bücher abrufen** | 1 | 🟡 | ✅ | `GET /users/me/library` | → `BookWithUserData[]` |
 | **Fremde Bibliothek** | 1 | 🟡 | ✅ | `GET /users/:userId/library` | → `BookWithUserData[]` |
-| **Buch zur Bibliothek hinzufügen** | 1 | ✅ |  | `POST /users/me/library` | `{isbn, state}` → `{userBook}` |
+| **Buch zur Bibliothek hinzufügen** | 1 | 🟡 | ✅ |  | `POST /users/me/library` | `{isbn, state}` → `{userBook}` |
 | **Buch aus Bibliothek löschen** | 1 | 🟡 | ✅ | `DELETE /users/me/library/:isbn` | `{}` → `{success}` |
 | **Buch-Status ändern** | 2 | 🟡 | ✅ | `PUT /users/me/library/:isbn/status` | `{state}` → `{userBook}` |
 | **Buch bewerten** | 3 | 🟡 | ❌ | `PUT /users/me/library/:isbn/rating` | `{rating}` → `{userBook}` |
