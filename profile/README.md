@@ -44,7 +44,7 @@ Hochschulphase: 12.01 - 6.02
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat (Request → Response) |
 |---------|------|----------|---------|--------------|----------------------------------|
 | **Login** | 1 | 🟡 | ❌ | `POST /auth/login` | `{email, password}` → Cookie: `jwt=...` + `{user}` |
-| **Registrierung** | 1 | 🟡 | ❌ | `POST /auth/register` | `{username, email, password}` → Cookie + `{user}` |
+| **Registrierung** | 1 | 🟡 | ✅ | `POST /auth/register` | `{username, email, password}` → Cookie + `{user}` |
 | **Logout** | 1 | 🟡 | ❌ | `POST /auth/logout` | - → Cookie löschen |
 | **Session prüfen** | 1 | ❌ | ❌ | `GET /auth/me` | Cookie automatisch → `{user}` oder `401` |
 | **Passwort zurücksetzen** | 3 | 🟡 | ❌ | `POST /auth/reset-password` | `{email}` → `{success, message}` |
@@ -71,7 +71,7 @@ interface User {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat (Response) |
 |---------|------|----------|---------|--------------|------------------------|
-| **Profil-Header Daten** | 1 | 🟡 | ❌ | `GET /users/:userId` | siehe unten |
+| **Profil-Header Daten** | 1 | 🟡 | ✅ | `GET /user/profile/:userId` | siehe unten |
 | **Folgen** | 3 | 🟡 | ❌ | `POST /users/:userId/follow` | `{}` → `{success}` |
 | **Entfolgen** | 3 | 🟡 | ❌ | `DELETE /users/:userId/follow` | `{}` → `{success}` |
 | **Follow-Status prüfen** | 3 | 🟡 | ❌ | `GET /users/:userId/follow-status` | `{}` → `{isFollowing: boolean}` |
