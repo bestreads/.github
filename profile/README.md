@@ -44,7 +44,7 @@ Hochschulphase: 12.01 - 6.02
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat (Request → Response) |
 |---------|------|----------|---------|--------------|----------------------------------|
 | **Login** | 1 | 🟡 | ❌ | `POST /auth/login` | `{email, password}` → Cookie: `jwt=...` + `{user}` |
-| **Registrierung** | 1 | 🟡 | ✅ | `POST /auth/register` | `{username, email, password}` → Cookie + `{user}` |
+| **Registrierung** | 1 | ✅ | ✅ | `POST /auth/register` | `{username, email, password}` → Cookie + `{user}` |
 | **Logout** | 1 | 🟡 | ❌ | `POST /auth/logout` | - → Cookie löschen |
 | **Session prüfen** | 1 | ❌ | ❌ | `GET /auth/me` | Cookie automatisch → `{user}` oder `401` |
 | **Passwort zurücksetzen** | 3 | 🟡 | ❌ | `POST /auth/reset-password` | `{email}` → `{success, message}` |
