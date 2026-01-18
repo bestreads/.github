@@ -143,7 +143,7 @@ interface BookWithUserData extends Book {
 |---------|------|----------|---------|--------------|-------------|
 | **Feed abrufen (Home)** | 1 | ❌ | ❌ | `GET /feed` | → `Post[]` (paginiert) |
 | **User-Posts abrufen (Profil)** | 1 | 🟡 | ❌ | `GET /users/:userId/posts` | → `Post[]` |
-| **Post erstellen** | 1 | ❌ | ❌ | `POST /posts` | `{bookIsbn, content, rating}` → `{post}` |
+| **Post erstellen** | 1 | ❌ | ✅ | `POST /user/id/post` | `{bookId, content, b64Image}` → `{post}` |
 | **Post liken** | 3 | ❌ | ❌ | `POST /posts/:postId/like` | `{}` → `{likes}` |
 | **Like entfernen** | 3 | ❌ | ❌ | `DELETE /posts/:postId/like` | `{}` → `{likes}` |
 | **Kommentare laden** | 3 | ❌ | ❌ | `GET /posts/:postId/comments` | → `Comment[]` |
