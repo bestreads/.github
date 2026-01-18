@@ -141,7 +141,7 @@ interface BookWithUserData extends Book {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat |
 |---------|------|----------|---------|--------------|-------------|
-| **Feed abrufen (Home)** | 1 | ❌ | ❌ | `GET /feed` | → `Post[]` (paginiert) |
+| **Feed abrufen (Home)** | 1 | 🟡 | ❌ | `GET /feed` | → `Post[]` (paginiert) |
 | **User-Posts abrufen (Profil)** | 1 | 🟡 | ❌ | `GET /users/:userId/posts` | → `Post[]` |
 | **Post erstellen** | 1 | ❌ | ✅ | `POST /user/id/post` | `{bookId, content, b64Image}` → `{post}` |
 | **Post liken** | 3 | ❌ | ❌ | `POST /posts/:postId/like` | `{}` → `{likes}` |
