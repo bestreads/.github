@@ -47,7 +47,6 @@ Hochschulphase: 12.01 - 6.02
 | **Registrierung** | 1 | ✅ | ✅ | `POST /auth/register` | `{username, email, password}` → Cookie + `{user}` |
 | **Logout** | 1 | 🟡 | ✅ | `POST /auth/logout` | - → Cookie löschen |
 | **Session prüfen** | 1 | ❌ | ✅ | `GET /auth/me` | Cookie automatisch → `{user}` oder `401` |
-| **Passwort zurücksetzen** | 3 | 🟡 | ❌ | `POST /auth/reset-password` | `{email}` → `{success, message}` |
 
 
 ### **2. User-Daten (ein Endpunkt für alle Änderungen)**
@@ -72,9 +71,6 @@ interface User {
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat (Response) |
 |---------|------|----------|---------|--------------|------------------------|
 | **Profil-Header Daten** | 1 | 🟡 | ✅ | `GET /user/profile/:userId` | siehe unten |
-| **Folgen** | 3 | 🟡 | ❌ | `POST /users/:userId/follow` | `{}` → `{success}` |
-| **Entfolgen** | 3 | 🟡 | ❌ | `DELETE /users/:userId/follow` | `{}` → `{success}` |
-| **Follow-Status prüfen** | 3 | 🟡 | ❌ | `GET /users/:userId/follow-status` | `{}` → `{isFollowing: boolean}` |
 
 **Profil-Header Response:**
 ```typescript
@@ -85,8 +81,6 @@ interface UserProfile {
   accountCreatedAtYear: number
   booksInLibrary: number
   posts: number
-  follower: number
-  following: number
 }
 ```
 
@@ -144,11 +138,6 @@ interface BookWithUserData extends Book {
 | **Feed abrufen (Home)** | 1 | 🟡 | ❌ | `GET /feed` | → `Post[]` (paginiert) |
 | **User-Posts abrufen (Profil)** | 1 | 🟡 | ❌ | `GET /users/:userId/posts` | → `Post[]` |
 | **Post erstellen** | 1 | ❌ | ✅ | `POST /user/id/post` | `{bookId, content, b64Image}` → `{post}` |
-| **Post liken** | 3 | ❌ | ❌ | `POST /posts/:postId/like` | `{}` → `{likes}` |
-| **Like entfernen** | 3 | ❌ | ❌ | `DELETE /posts/:postId/like` | `{}` → `{likes}` |
-| **Kommentare laden** | 3 | ❌ | ❌ | `GET /posts/:postId/comments` | → `Comment[]` |
-| **Kommentar schreiben** | 3 | ❌ | ❌ | `POST /posts/:postId/comments` | `{content}` → `{comment}` |
-| **Kommentar löschen** | 3 | ❌ | ❌ | `DELETE /posts/:postId/comments/:commentId` | `{}` → `{success}` |
 
 
 **Post-Datenstrukturen:**
