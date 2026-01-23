@@ -18,7 +18,7 @@ Aktivitäten wie Lesefortschritte oder Statusupdates sollen mit anderen Nutzerin
 | 7      | 16.02 – 20.02 (kurz) Bericht|
 
 ---
-12.03.2026 Abgabe
+12.03.2026 Abgabe und Präsentation
 ---
 Hochschulphase: 12.01 - 6.02
 
