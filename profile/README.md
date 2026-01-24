@@ -26,7 +26,7 @@ Hochschulphase: 12.01 - 6.02
 
 # Aktueller Stand
 
-> **Stand:** 08.01.2026
+> **Stand:** 20.01.2026
 
 ### **Legende**
 
@@ -46,10 +46,10 @@ Hochschulphase: 12.01 - 6.02
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat (Request → Response) |
 |---------|------|----------|---------|--------------|----------------------------------|
-| **Login** | 1 | 🟡 | ✅ | `POST /auth/login` | `{email, password}` → Cookie: `jwt=...` + `{user}` |
+| **Login** | 1 | ✅ | ✅ | `POST /auth/login` | `{email, password}` → Cookie: `jwt=...` + `{user}` |
 | **Registrierung** | 1 | ✅ | ✅ | `POST /auth/register` | `{username, email, password}` → Cookie + `{user}` |
-| **Logout** | 1 | 🟡 | ✅ | `POST /auth/logout` | - → Cookie löschen |
-| **Session prüfen** | 1 | ❌ | ✅ | `GET /auth/me` | Cookie automatisch → `{user}` oder `401` |
+| **Logout** | 1 | ✅ | ✅ | `POST /auth/logout` | - → Cookie löschen |
+| **Session prüfen** | 1 | ✅ | ✅ | `GET /auth/me` | Cookie automatisch → `{user}` oder `401` |
 
 
 ### **2. User-Daten (ein Endpunkt für alle Änderungen)**
@@ -65,7 +65,7 @@ interface User {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat |
 |---------|------|----------|---------|--------------|-------------|
-| **User-Daten ändern** | 3 | 🟡 | ❌ | `PATCH /users/me` | `{username?, email?, password?, profilePicture?}` → `{user}` |
+| **User-Daten ändern** | 3 | ✅ | ✅ | `PATCH /users/me` | `{username?, email?, password?, profilePicture?}` → `{user}` |
 
 
 
@@ -73,7 +73,7 @@ interface User {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat (Response) |
 |---------|------|----------|---------|--------------|------------------------|
-| **Profil-Header Daten** | 1 | 🟡 | ✅ | `GET /user/profile/:userId` | siehe unten |
+| **Profil-Header Daten** | 1 | ✅ | ✅ | `GET /user/profile/:userId` | siehe unten |
 
 **Profil-Header Response:**
 ```typescript
@@ -93,12 +93,12 @@ interface UserProfile {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat |
 |---------|------|----------|---------|--------------|-------------|
-| **Eigene Bücher abrufen** | 1 | 🟡 | ✅ | `GET /users/me/library` | → `BookWithUserData[]` |
-| **Fremde Bibliothek** | 1 | 🟡 | ✅ | `GET /users/:userId/library` | → `BookWithUserData[]` |
-| **Buch zur Bibliothek hinzufügen** | 1 | 🟡 | ✅ |  | `POST /users/me/library` | `{isbn, state}` → `{userBook}` |
-| **Buch aus Bibliothek löschen** | 1 | 🟡 | ✅ | `DELETE /users/me/library/:isbn` | `{}` → `{success}` |
-| **Buch-Status ändern** | 2 | 🟡 | ✅ | `PUT /users/me/library/:isbn/status` | `{state}` → `{userBook}` |
-| **Buch bewerten** | 3 | 🟡 | ❌ | `PUT /users/me/library/:isbn/rating` | `{rating}` → `{userBook}` |
+| **Eigene Bücher abrufen** | 1 | ✅ | ✅ | `GET /users/me/library` | → `BookWithUserData[]` |
+| **Fremde Bibliothek** | 1 | ✅ | ✅ | `GET /users/:userId/library` | → `BookWithUserData[]` |
+| **Buch zur Bibliothek hinzufügen** | 1 | ✅ | ✅ |  | `POST /users/me/library` | `{isbn, state}` → `{userBook}` |
+| **Buch aus Bibliothek löschen** | 1 | ✅ | ✅ | `DELETE /users/me/library/:isbn` | `{}` → `{success}` |
+| **Buch-Status ändern** | 2 | ✅ | ✅ | `PUT /users/me/library/:isbn/status` | `{state}` → `{userBook}` |
+| **Buch bewerten** | 3 | ✅ | ✅ | `PUT /users/me/library/:isbn/rating` | `{rating}` → `{userBook}` |
 
 **Buch-Datenstrukturen:**
 ```typescript
@@ -129,8 +129,8 @@ interface BookWithUserData extends Book {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat |
 |---------|------|----------|---------|--------------|-------------|
-| **Bücher suchen** | 1 | 🟡 | ✅ | `GET /books/search?q=<query>` | → `Book[]` |
-| **Buch-Details** | 1 | 🟡 | ✅ | `GET /books/:isbn` | → `Book` |
+| **Bücher suchen** | 1 | ✅ | ✅ | `GET /books/search?q=<query>` | → `Book[]` |
+| **Buch-Details** | 1 | ✅ | ✅ | `GET /books/:isbn` | → `Book` |
 
 
 
@@ -138,9 +138,9 @@ interface BookWithUserData extends Book {
 
 | Feature | Prio | Frontend | Backend | API-Endpunkt | Datenformat |
 |---------|------|----------|---------|--------------|-------------|
-| **Feed abrufen (Home)** | 1 | 🟡 | ❌ | `GET /feed` | → `Post[]` (paginiert) |
-| **User-Posts abrufen (Profil)** | 1 | 🟡 | ❌ | `GET /users/:userId/posts` | → `Post[]` |
-| **Post erstellen** | 1 | ❌ | ✅ | `POST /user/id/post` | `{bookId, content, b64Image}` → `{post}` |
+| **Feed abrufen (Home)** | 1 | ✅ | ✅ | `GET /feed` | → `Post[]` (paginiert) |
+| **User-Posts abrufen (Profil)** | 1 | ✅ | ✅ | `GET /users/:userId/posts` | → `Post[]` |
+| **Post erstellen** | 1 | ✅ | ✅ | `POST /user/id/post` | `{bookId, content, b64Image}` → `{post}` |
 
 
 **Post-Datenstrukturen:**
