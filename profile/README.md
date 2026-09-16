@@ -15,8 +15,8 @@ Aktivitäten wie Lesefortschritte oder Statusupdates sollen mit anderen Nutzerin
 | 4      | 05.01 – 16.01        |
 | 5      | 19.01 – 30.01        |
 | 6      | 02.02 – 13.02         |
-| 7      | 16.02 – 27.02 <-- Derzeit hier       |
-| 8      | 02.03 – 12.03        |
+| 7      | 16.02 – 27.02     |
+| 8      | 02.03 – 12.03        | Fertig!
 
 ---
 12.03.2026 Abgabe und Präsentation
